@@ -1,0 +1,181 @@
+.class final Lnxq;
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.source "SourceFile"
+
+
+# instance fields
+.field private synthetic a:I
+
+.field private synthetic b:Lnxp;
+
+
+# direct methods
+.method constructor <init>(Lnxp;I)V
+    .locals 0
+
+    .prologue
+    .line 92
+    iput-object p1, p0, Lnxq;->b:Lnxp;
+
+    iput p2, p0, Lnxq;->a:I
+
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 6
+
+    .prologue
+    const-wide/16 v4, 0xfa
+
+    const/4 v3, 0x0
+
+    .line 99
+    iget-object v0, p0, Lnxq;->b:Lnxp;
+
+    .line 1036
+    iget-boolean v0, v0, Lnxp;->f:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    iget v1, p0, Lnxq;->a:I
+
+    int-to-float v1, v1
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_1
+
+    .line 107
+    :cond_0
+    :goto_0
+    return v3
+
+    .line 102
+    :cond_1
+    const/4 v0, 0x0
+
+    cmpl-float v0, p3, v0
+
+    if-lez v0, :cond_2
+
+    .line 103
+    iget-object v0, p0, Lnxq;->b:Lnxp;
+
+    .line 3189
+    iget-object v1, v0, Lnxp;->b:Landroid/widget/TextView;
+
+    .line 3190
+    invoke-virtual {v1}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    .line 3191
+    invoke-virtual {v1, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 3192
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    new-instance v2, Lnxt;
+
+    invoke-direct {v2, v0}, Lnxt;-><init>(Lnxp;)V
+
+    .line 3193
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    .line 3200
+    invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
+
+    .line 3201
+    iget-object v1, v0, Lnxp;->c:Landroid/view/View;
+
+    .line 3202
+    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    .line 3203
+    invoke-virtual {v1, v4, v5}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lnxp;->b:Landroid/widget/TextView;
+
+    .line 3204
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    .line 3205
+    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
+
+    goto :goto_0
+
+    .line 105
+    :cond_2
+    iget-object v0, p0, Lnxq;->b:Lnxp;
+
+    .line 4036
+    const/16 v1, 0xfa
+
+    invoke-virtual {v0, v1}, Lnxp;->a(I)V
+
+    goto :goto_0
+.end method
+
+.method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 2
+
+    .prologue
+    .line 112
+    iget-object v0, p0, Lnxq;->b:Lnxp;
+
+    .line 1036
+    const/16 v1, 0xfa
+
+    invoke-virtual {v0, v1}, Lnxp;->a(I)V
+
+    .line 113
+    iget-object v0, p0, Lnxq;->b:Lnxp;
+
+    .line 2036
+    iget-object v0, v0, Lnxp;->a:Lnxw;
+
+    iget-object v1, p0, Lnxq;->b:Lnxp;
+
+    .line 3036
+    iget-object v1, v1, Lnxp;->e:Lxej;
+
+    invoke-interface {v0, v1}, Lnxw;->a(Lxej;)V
+
+    .line 114
+    const/4 v0, 0x0
+
+    return v0
+.end method

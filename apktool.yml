@@ -1,0 +1,24 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: YouTube12.05.53.apk
+compressionType: false
+doNotCompress:
+- arsc
+- webp
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '16'
+  targetSdkVersion: '25'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.2
+versionInfo:
+  versionCode: '120553134'
+  versionName: 12.05.53

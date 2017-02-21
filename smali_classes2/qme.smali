@@ -1,0 +1,118 @@
+.class final Lqme;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lqaj;
+
+
+# instance fields
+.field private synthetic a:Lqlj;
+
+
+# direct methods
+.method constructor <init>(Lqlj;)V
+    .locals 0
+
+    .prologue
+    .line 2458
+    iput-object p1, p0, Lqme;->a:Lqlj;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(IZ)V
+    .locals 5
+
+    .prologue
+    .line 2461
+    if-eqz p1, :cond_0
+
+    .line 2462
+    const/16 v0, 0x4b
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v0, "Error updating mic for live capture: status="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", isMicEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lned;->c(Ljava/lang/String;)V
+
+    .line 2464
+    iget-object v0, p0, Lqme;->a:Lqlj;
+
+    .line 10130
+    iget-boolean v0, v0, Lqlj;->aN:Z
+
+    if-eqz v0, :cond_0
+
+    .line 2465
+    iget-object v0, p0, Lqme;->a:Lqlj;
+
+    iget-object v0, v0, Lqlj;->ab:Lqaa;
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lqme;->a:Lqlj;
+
+    .line 20130
+    iget v2, v2, Lqlj;->aI:I
+
+    iget-object v3, p0, Lqme;->a:Lqlj;
+
+    const v4, 0x7f120254
+
+    .line 2468
+    invoke-virtual {v3, v4}, Lqlj;->a(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    .line 2465
+    invoke-virtual {v0, v1, v2, v3, v4}, Lqaa;->a(IILjava/lang/String;Z)V
+
+    .line 2472
+    :cond_0
+    iget-object v0, p0, Lqme;->a:Lqlj;
+
+    .line 30130
+    iput-boolean p2, v0, Lqlj;->av:Z
+
+    .line 2473
+    iget-object v0, p0, Lqme;->a:Lqlj;
+
+    iget-object v0, v0, Lqlj;->ae:Lqmv;
+
+    invoke-interface {v0, p2}, Lqmv;->e(Z)V
+
+    .line 2474
+    return-void
+.end method

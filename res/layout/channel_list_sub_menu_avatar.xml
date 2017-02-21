@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" _xmlns:android="http://schemas.android.com/apk/res/android" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.libraries.youtube.common.ui.CircularImageView android:layout_gravity="center" android:id="@id/channel_avatar" android:padding="@dimen/channel_list_sub_menu_stroke_width" android:layout_width="@dimen/channel_list_sub_menu_small_size" android:layout_height="@dimen/channel_list_sub_menu_small_size" android:scaleType="centerInside" />
+    <View android:layout_gravity="end|bottom|center" android:id="@id/channel_status" android:background="@drawable/channel_list_sub_menu_avatar_status" android:layout_width="@dimen/channel_list_sub_menu_status_width" android:layout_height="@dimen/channel_list_sub_menu_status_width" android:layout_marginRight="6.0dip" />
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/choose_thumbnail_content" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/thumbnail_top_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/choose_thumbnail_fragment_top_bar" />
+        <RelativeLayout android:id="@id/thumbnail_capture_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/thumbnail_top_bar">
+            <com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout android:id="@id/viewport_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lc_thumbnail_viewport_margin_top" android:layout_marginBottom="@dimen/lc_thumbnail_viewport_margin_bottom" res-auto:aspectRatio="@fraction/lc_aspect_ratio_16_9" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+                <com.google.android.libraries.youtube.livecreation.ui.view.WaitingIndicatorView android:layout_gravity="center" android:id="@id/countdown_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </com.google.android.libraries.youtube.common.ui.FixedAspectRatioFrameLayout>
+            <TextView android:textSize="@dimen/lc_thumbnail_capture_text_size" android:id="@id/thumbnail_capture_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/viewport_container" android:layout_centerHorizontal="true" android:fontFamily="sans-serif-light" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/thumbnail_preview_root" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/thumbnail_top_bar">
+            <com.google.android.libraries.youtube.common.ui.FixedAspectRatioRelativeLayout android:id="@id/thumbnail_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lc_thumbnail_preview_margin_horizontal" android:layout_marginTop="@dimen/lc_thumbnail_preview_margin_top" android:layout_marginRight="@dimen/lc_thumbnail_preview_margin_horizontal" res-auto:aspectRatio="@fraction/aspect_ratio_16_9" xmlns:res-auto="http://schemas.android.com/apk/res-auto">
+                <include layout="@layout/choose_thumbnail_fragment_thumbnail" />
+            </com.google.android.libraries.youtube.common.ui.FixedAspectRatioRelativeLayout>
+            <include android:id="@id/thumbnail_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lc_thumbnail_button_bar_margin_top" android:layout_below="@id/thumbnail_preview_container" android:layout_centerHorizontal="true" layout="@layout/choose_thumbnail_fragment_button_layout" />
+            <TextView android:gravity="center" android:id="@id/stream_orientation_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/lc_thumbnail_stream_orientation_margin_bottom" android:drawablePadding="@dimen/lc_thumbnail_stream_orientation_drawable_padding" android:layout_above="@id/start_stream_button" android:layout_centerHorizontal="true" />
+            <Button android:enabled="false" android:textSize="@dimen/body_text_size" android:textColor="@color/lc_stream_action_button_text_color_selector" android:id="@id/start_stream_button" android:background="@drawable/lc_stream_action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lc_activity_horizontal_margin" android:layout_marginRight="@dimen/lc_activity_horizontal_margin" android:layout_marginBottom="@dimen/lc_activity_vertical_margin" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.google.android.libraries.youtube.livecreation.ui.view.NetworkOperationView android:layout_gravity="center" android:id="@id/choose_thumbnail_network_operation" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>
