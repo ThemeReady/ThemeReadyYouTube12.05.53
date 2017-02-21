@@ -2,5 +2,5 @@
 <LinearLayout android:orientation="vertical" android:paddingLeft="24.0dip" android:paddingTop="8.0dip" android:paddingRight="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" _xmlns:android="http://schemas.android.com/apk/res/android" _xmlns:yt="http://schemas.android.com/apk/res-auto" xmlns:_xmlns="xmlns"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.google.android.libraries.youtube.common.ui.YouTubeTextView android:textColor="@color/youtube_blue" android:linksClickable="true" android:id="@id/learn_more" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/learn_more" res-auto:robotoFont="regular" xmlns:res-auto="http://schemas.android.com/apk/res-auto" />
-    <CheckBox android:textColor="#ff636167" android:id="@id/dont_ask_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/permission_not_ask_again" />
+    <CheckBox android:textColor="@color/secondary_font" android:id="@id/dont_ask_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/permission_not_ask_again" />
 </LinearLayout>
