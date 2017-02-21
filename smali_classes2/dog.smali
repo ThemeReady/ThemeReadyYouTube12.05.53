@@ -56,7 +56,7 @@
 
     move-result-object v1
 
-    const v2, 0x106000d
+    const v2, 0x7f0c0037 # @color/background_floating_material_light
 
     invoke-virtual {v1, v2}, Landroid/view/Window;->setBackgroundDrawableResource(I)V
 

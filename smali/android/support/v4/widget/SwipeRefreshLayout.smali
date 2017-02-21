@@ -273,7 +273,7 @@
     iget-object v1, v1, Lzh;->b:Lzl;
 
     .line 30510
-    const v2, -0x50506
+    const v2, -0xeeeeef
 
     iput v2, v1, Lzl;->v:I
 

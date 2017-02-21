@@ -520,7 +520,7 @@
 
     iget-object v1, v5, Lgoq;->b:Landroid/content/res/Resources;
 
-    const v3, 0x106000b
+    const v3, 0x7f0c02ea # @color/quantum_white_text
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 

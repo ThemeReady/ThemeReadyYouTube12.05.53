@@ -31,6 +31,8 @@
 
 .field public static final k:Lueh;
 
+.field public static final color_brand_primary:I = 0x7f0c0070
+
 
 # instance fields
 .field public final l:Ljava/lang/String;
@@ -65,11 +67,11 @@
     .locals 7
 
     .prologue
-    const v6, -0x1744d5
+    const v6, -0x1
 
-    const v5, -0xd86c1a
+    const v5, -0x1
 
-    const v4, -0x19dee9
+    const v4, -0x1
 
     const/4 v3, 0x1
 

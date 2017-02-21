@@ -466,7 +466,7 @@
     :try_start_1
     iget-object v1, p0, Lmfj;->r:Landroid/content/res/Resources;
 
-    const v2, 0x106000c
+    const v2, 0x106000d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
     :try_end_1

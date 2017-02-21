@@ -846,7 +846,7 @@
     :cond_8
     iget-object v0, p0, Lnya;->a:Landroid/view/View;
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
